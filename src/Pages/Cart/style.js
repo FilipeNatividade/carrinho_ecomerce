@@ -8,21 +8,26 @@ export const Container = styled.div`
   padding: 5vh 0;
 `;
 
-export const Card = styled.div`
-  background-color: #fff;
-  box-shadow: 1vh 1vh 1vh #000;
-  box-sizing: border-box;
-  border-radius: 2vh;
-  padding: 3vh 1vh;
-  width: 30%;
+export const DivHeader = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @media (min-width: 600px) {
+    align-items: center;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 90%;
+  }
 `;
 
-export const BikeImg = styled.img`
-  width: 100%;
-`;
+export const ContainerCards = styled.div`
+  display: flex;
+  flex-direction: column;
 
-export const PDisc = styled.p`
-  height: 7vh;
+  @media (min-width: 600px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 `;
 
 export const ButtonAdd = styled.button`
@@ -39,4 +44,5 @@ export const ButtonAdd = styled.button`
 
 export const BackButton = styled(ButtonAdd)`
   background-color: #00003b;
+  margin: 5vw auto;
 `;

@@ -1,16 +1,12 @@
-import { ProductList } from "../../data/ProductList";
-import { Container, Card, BikeImg, PDisc, ButtonAdd } from "./style";
+import Product from "../../components/Product/index";
+import { productList } from "../../data/ProductList";
+import { Container } from "./style";
+
 const Home = () => {
   return (
     <Container>
-      {ProductList.map((crr, idx) => (
-        <Card key={idx}>
-          <h2>{crr.name}</h2>
-          <p>R$ {crr.price}</p>
-          <BikeImg src={crr.url_img} />
-          <PDisc>{crr.description}</PDisc>
-          <ButtonAdd>Add To cart</ButtonAdd>
-        </Card>
+      {productList.map((crr, idx) => (
+        <Product key={idx} product={crr} />
       ))}
     </Container>
   );

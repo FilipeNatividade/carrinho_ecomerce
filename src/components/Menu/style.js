@@ -3,12 +3,18 @@ import styled from "styled-components";
 export const HeaderMenu = styled.header`
   background-color: #00003b;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   height: 20vh;
-  width: 100vw;
+  width: 100%;
+
+  @media (min-width: 600px) {
+    flex-direction: row;
+  }
 `;
 
 export const MenuLogo = styled.div`
+  align-items: center;
   display: flex;
 `;
 
@@ -19,30 +25,41 @@ export const LogoKenzie = styled.img`
 export const NameShop = styled.h1`
   color: #fff;
   font-size: 4vh;
-  margin-top: 12vh;
+
+  @media (min-width: 600px) {
+    margin-top: 12vh;
+  }
 `;
 
 export const MenuCart = styled.div`
   box-sizing: border-box;
+  background-color: #00003b;
   color: #fff;
   display: flex;
-  height: 20vh;
-  padding-top: 12vh;
-`;
+  height: 5vh;
+  justify-content: space-between;
+  margin-top: -1px;
 
-export const ButtonCart = styled.button`
-  color: #fff;
-  display: flex;
-  width: 20vh;
-  background-color: transparent;
-  outline: none;
-  border: none;
-  &:hover {
-    cursor: pointer;
+  @media (min-width: 600px) {
+    height: 20vh;
+    padding-top: 12vh;
   }
 `;
 export const H2MenuCart = styled.h2`
   font-size: 2vh;
-  margin: 0 5vh;
-  margin-left: 1vh;
+  margin: 0 1vh;
+`;
+
+export const ButtonCart = styled.button`
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  outline: none;
+  width: 20vh;
+  &:hover {
+    cursor: pointer;
+  }
 `;

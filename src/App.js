@@ -1,5 +1,6 @@
 import "./App.css";
 import Menu from "./components/Menu";
+import Footer from "./components/footer";
 import Routes from "./Routes";
 
 const App = () => {
@@ -7,6 +8,7 @@ const App = () => {
     <div className="App">
       <Menu />
       <Routes />
+      <Footer />
     </div>
   );
 };

@@ -7,10 +7,8 @@ import {
   H2MenuCart,
   ButtonCart,
 } from "./style";
-// import logo_kenzie from "../../Image/logo_kenzie.png";
-// import logo_kenzie from "../../../public/image/logo_kenzie.png";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
-import InputIcon from "@material-ui/icons/Input";
+import HomeIcon from "@material-ui/icons/Home";
 import { useHistory } from "react-router-dom";
 
 const Menu = () => {
@@ -19,16 +17,18 @@ const Menu = () => {
     <>
       <HeaderMenu>
         <MenuLogo>
-          <LogoKenzie src="./logo_kenzie.png" />
+          <LogoKenzie src="./image/logo_kenzie.png" />
           <NameShop>Kenzie Shop</NameShop>
         </MenuLogo>
         <MenuCart>
           <ButtonCart onClick={() => history.push("/cart")}>
             <ShoppingCartIcon />
-            <H2MenuCart style={{ marginRight: "8vh" }}>Carrinho</H2MenuCart>
+            <H2MenuCart>Carrinho</H2MenuCart>
           </ButtonCart>
-          <InputIcon />
-          <H2MenuCart>Enter</H2MenuCart>
+          <ButtonCart onClick={() => history.push("/")}>
+            <HomeIcon />
+            <H2MenuCart>Home</H2MenuCart>
+          </ButtonCart>
         </MenuCart>
       </HeaderMenu>
     </>
