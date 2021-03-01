@@ -4,13 +4,8 @@ export const Container = styled.div`
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
-  height: 37rem;
   justify-content: space-around;
   padding: 5vh 0;
-
-  @media (min-width: 600px) {
-    height: 30.2rem;
-  }
 `;
 
 export const DivHeader = styled.div`
